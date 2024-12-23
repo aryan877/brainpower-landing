@@ -1,21 +1,16 @@
 import React from "react";
 import {
   Github,
-  Zap,
-  Cpu,
   Wallet,
   Coins,
   ArrowRight,
-  Terminal,
-  Bot,
-  Image,
+  Image as ImageIcon,
   Boxes,
   LineChart,
   Shield,
-  Code,
-  Settings,
   MessageSquare,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function LandingPage() {
   return (
@@ -27,12 +22,12 @@ export default function LandingPage() {
 
         <div className="container mx-auto px-4 pt-24 pb-32 relative">
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
-            BrainPower
+            BrainPower 🧠⚡
           </h1>
           <p className="text-2xl text-neutral-200 max-w-2xl mb-12">
             An AI-powered blockchain agent that interacts with the Solana
-            blockchain using natural language. Built with OpenAI's Assistant
-            API.
+            blockchain using natural language. Built with OpenAI&apos;s
+            Assistant API.
           </p>
           <a
             href="https://github.com/aryan877/brainpower"
@@ -77,8 +72,8 @@ export default function LandingPage() {
             <div className="lg:w-1/2">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-purple-600 rounded-xl blur-xl opacity-50" />
-                <img
-                  src="/placeholder.svg?height=600&width=800"
+                <Image
+                  src="/demo.webp"
                   alt="BrainPower Chat Interface"
                   className="relative rounded-xl shadow-2xl border border-neutral-800"
                   width={800}
@@ -111,7 +106,7 @@ export default function LandingPage() {
             />
 
             <FeatureSection
-              icon={<Image className="w-6 h-6" />}
+              icon={<ImageIcon className="w-6 h-6" />}
               title="NFT Operations"
               features={[
                 "Create NFT collections",
